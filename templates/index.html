@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>惊秋</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>惊秋</h1>
+            <p>风吹一片叶，万物已惊秋。</p>
+        </header>
+        <main>
+            <div class="poem-card" id="poem-card">
+                <h2 id="poem-title">1</h2>
+                <h4 id="poem-author">3</h4>
+                <p id="poem-content">2</p>
+            </div>
+            <button id="new-poem" class="btn">获取新诗词</button>
+
+        </main>
+    </div>
+    <script>
+        // 从后端获取诗词数据并更新页面
+        function fetchPoem() {
+            fetch('/random-poem')
+                .then(response => response.json())
+                .then(data => {
+                    if (!data.error) {
+                        document.getElementById('poem-title').innerText = data.title;
+                        document.getElementById('poem-content').innerText = data.content;
+                        document.getElementById('poem-author').innerText = data.author;
+                    } else {
+                        console.error(data.error);
+                    }
+                });
+        }
+
+        document.getElementById('new-poem').addEventListener('click', fetchPoem);
+
+        // 初始加载一首诗词
+        fetchPoem();
+    </script>
+</body>
+</html>

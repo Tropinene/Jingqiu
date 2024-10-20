@@ -1,0 +1,77 @@
+@font-face {
+    font-family: 'song'; /* 自定义字体的名称 */
+    src: url('./fonts/HYChangLiSongKeBen(Original)J.ttf')  format('truetype');
+}
+
+body {
+    font-family: 'song', sans-serif;
+    background-color: #f7f9fc;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    font-family: 'song', sans-serif;
+    text-align: left; /* 将文本对齐方式更改为左对齐 */
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 28px; /* 减小标题字体大小 */
+    color: #34495e; /* 使用稍微淡一些的颜色 */
+    opacity: 0.8; /* 添加透明度，使标题的存在感更弱 */
+}
+
+header p {
+    font-size: 16px; /* 减小描述字体大小 */
+    color: #95a5a6; /* 使用更淡的颜色 */
+    opacity: 0.8; /* 添加透明度 */
+}
+
+.poem-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.poem-card h2 {
+    font-size: 24px;
+    color: #2980b9;
+}
+
+.poem-card p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin: 15px 0;
+}
+
+.poem-card h4 {
+    font-size: 18px;
+    color: #95a5a6;
+    margin-top: 10px;
+}
+
+.btn {
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #1f6287;
+}
